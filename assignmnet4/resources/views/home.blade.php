@@ -11,12 +11,13 @@
 
 <!--   FORM  --------------->
     <div class="container">
-        <form action="" method="post">
+        <form action="/" method="post">
+          {{ csrf_field() }}
           <div class="col-md-6">
             <div class="form-group">
                 <label for="title">Tweet</label>
                 <!-- <input type="text" name="title" class="form-control" id="title"> -->
-                <textarea class="form-control" name="title" id="title" rows="3"></textarea>
+                <textarea class="form-control" name="tweet" id="title" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Tweet</button>
         </form>
