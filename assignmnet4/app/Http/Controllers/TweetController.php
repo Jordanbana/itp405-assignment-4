@@ -12,7 +12,7 @@ class TweetController extends Controller
     public function index(){
        $tweets = DB::table('tweets')
            ->select('tweet', 'id')
-           ->OrderBy('id')
+           ->OrderBy('id' , 'DESC')
            ->get();
 
        return view('home', [
@@ -22,7 +22,7 @@ class TweetController extends Controller
 
      public function store(Request $request){
            $validator = Validator::make($request->all(), [
-               'tweet' => 'required',
+               'tweet' => 'required|max:140',
            ]);
 
            if ($validator->passes()) {

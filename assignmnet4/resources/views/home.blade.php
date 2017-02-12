@@ -9,6 +9,30 @@
   </head>
   <body>
 
+
+<!--   Success and Erro messages  --------------->
+    <div class="row">
+          <div class="col-xs-12">
+              @if (session('successStatus'))
+                 <div class="alert alert-success" role="alert">
+                    {{ session('successStatus') }}
+                  </div>
+                @endif
+
+              @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                  <ul>
+                    @foreach($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                </div>
+              @endif
+          </div>
+    </div>
+
+
+
 <!--   FORM  --------------->
     <div class="container">
         <form action="/" method="post">
@@ -42,11 +66,13 @@
                <tr>
                  <td>{{ $tweet->id }}</td>
                  <td>{{ $tweet->tweet}}</td>
+                 <td> View </td>
                </tr>
              @endforeach
              </table>
            </div>
-         </div>
+    </div>
+
 
 
 
