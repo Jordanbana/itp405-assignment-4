@@ -31,7 +31,7 @@ class TweetController extends Controller
                ]);
 
                return redirect('/')
-                   ->with('successStatus', 'Song created successfully!');
+                   ->with('successStatus', 'Tweet created successfully!');
            } else {
                return redirect('/')->withErrors($validator);
            }
