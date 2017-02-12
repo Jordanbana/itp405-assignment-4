@@ -26,8 +26,7 @@
 
 
 
-
-
+<!--  Displaying Tweets   ------------->
     <div class="row">
            <div class="col-xs-12">
              <table class="table table-striped">
@@ -38,8 +37,12 @@
                  </tr>
                </thead>
                <tbody>
-
-               </tbody>
+             @foreach ($tweets as $tweet)
+               <tr>
+                 <td>{{ $tweet->id }}</td>
+                 <td>{{ $tweet->tweet}}</td>
+               </tr>
+             @endforeach
              </table>
            </div>
          </div>
