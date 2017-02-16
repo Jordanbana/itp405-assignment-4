@@ -7,3 +7,5 @@ Route::get('/', 'TweetController@index');
 
 
 Route::post('/', 'TweetController@store');
+
+Route::get('/tweet/{id}', 'TweetController@view');

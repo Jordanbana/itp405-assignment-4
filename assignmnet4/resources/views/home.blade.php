@@ -66,7 +66,7 @@
                <tr>
                  <td>{{ $tweet->id }}</td>
                  <td>{{ $tweet->tweet}}</td>
-                 <td> View </td>
+                 <td><button type="submit" class="btn btn-primary">View</button></td>
                </tr>
              @endforeach
              </table>

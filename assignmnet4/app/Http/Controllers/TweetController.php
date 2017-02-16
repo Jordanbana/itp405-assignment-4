@@ -37,4 +37,14 @@ class TweetController extends Controller
            }
        }
 
+    public function view($tweetsID){
+
+          // DB::table('tweets')
+          //     ->where('id', '=', $tweetsID)
+          //     ->delete();
+
+          return redirect("/tweet");
+
+    }
+
 }
