@@ -8,4 +8,6 @@ Route::get('/', 'TweetController@index');
 
 Route::post('/', 'TweetController@store');
 
-Route::get('/tweet/{id}', 'TweetController@view');
+Route::get('/tweets/{id}', 'TweetController@view');
+
+Route::get('/tweets/{id}/delete', 'TweetController@destroy');

@@ -66,7 +66,9 @@
                <tr>
                  <td>{{ $tweet->id }}</td>
                  <td>{{ $tweet->tweet}}</td>
-                 <td><button type="submit" class="btn btn-primary">View</button></td>
+                 <td><a href="/tweets/{{ $tweet->id }}" class = "btn btn-primary"> View </a></td>
+                 <td><a href="/tweets/{{ $tweet->id }}/delete" class = "btn btn-primary"> X </a></td>
+
                </tr>
              @endforeach
              </table>

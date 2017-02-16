@@ -39,12 +39,26 @@ class TweetController extends Controller
 
     public function view($tweetsID){
 
-          // DB::table('tweets')
-          //     ->where('id', '=', $tweetsID)
-          //     ->delete();
+          DB::table('tweets')
+              ->where('id', '=', $tweetsID)
+              ->get();
 
-          return redirect("/tweet");
+          return redirect("/tweet", [
+              'tweets' => $tweets
+          ]);
 
     }
+
+
+    public function destroy($tweetsID){
+
+              DB::table('tweets')
+                  ->where('id', '=', $tweetsID)
+                  ->delete();
+
+              return redirect("/")
+               ->with('successStatus', 'Tweet was deleted successfully!');
+
+        }
 
 }
