@@ -39,11 +39,11 @@ class TweetController extends Controller
 
     public function view($tweetsID){
 
-          DB::table('tweets')
+          $tweets = DB::table('tweets')
               ->where('id', '=', $tweetsID)
               ->get();
 
-          return redirect("/tweet", [
+          return view("/tweet", [
               'tweets' => $tweets
           ]);
 
