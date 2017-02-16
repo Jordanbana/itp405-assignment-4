@@ -26,6 +26,7 @@
                <tr>
                  <td>{{ $tweet->id }}</td>
                  <td>{{ $tweet->tweet}}</td>
+                 <td><a href="/tweets/{{ $tweet->id }}/delete" class = "btn btn-primary"> X </a></td>
                </tr>
              @endforeach
              </table>
